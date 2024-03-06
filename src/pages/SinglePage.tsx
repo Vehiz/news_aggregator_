@@ -1,26 +1,8 @@
-import React, { FC, MouseEvent } from 'react'
-import { Link, To } from 'react-router-dom'
+import React, {  MouseEvent } from 'react'
 import img from '../assets/pexels-thought-catalog-904616.jpg'
-import { MdSaveAlt } from 'react-icons/md'
 import { Article } from './Landing'
 import { IconType } from 'react-icons'
-// interface newsArticles {
-//   publishedAt: any
-//   url: any
-//   author: any
-//   urlToImage: any
-//   title: any
-//   description: any
-//   article: {
-//     author: any
-//     title: string
-//     publishedAt: string
-//     urlToImage: string
-//   }[]
-// }
-// interface saveArticles {
-//   saveArticles: (e: ChangeEvent<HTMLInputElement>) => void
-// }
+
 
 interface Props {
   article: Article

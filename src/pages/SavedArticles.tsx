@@ -8,7 +8,7 @@ interface SavedArticle {
   url: string
   author: string | null
   urlToImage: string | null
-  title: string | null
+  title: string 
   description: string | null
   publishedAt: string | null
 }

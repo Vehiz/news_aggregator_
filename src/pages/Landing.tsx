@@ -7,11 +7,11 @@ import { toast } from 'react-toastify'
 
 export interface Article {
   url: string
-  author: any
-  urlToImage: any
-  title: any
-  description: any
-  publishedAt: any
+  author: string | null
+  urlToImage: string | null
+  title: string 
+  description: string | null
+  publishedAt: string | null
 }
 
 const API_KEY: string = '95ee27b835b146aa9f970467509705e3';
@@ -49,9 +49,9 @@ const Landing: React.FC = () => {
    }
   }
 
-  // useEffect(() => {
-  //   fetchNews(currentPage)
-  // }, [currentPage]) // Fetch news only once when the component mounts
+  useEffect(() => {
+    fetchNews(currentPage)
+  }, [currentPage]) // Fetch news only once when the component mounts
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -66,7 +66,7 @@ const Landing: React.FC = () => {
   }
 
   const saveArticle = (article: Article) => {
-    let savedArticles: Article[] = JSON.parse(
+    const savedArticles: Article[] = JSON.parse(
       localStorage.getItem('savedArticles') || '[]'
     )
     savedArticles.push(article)
