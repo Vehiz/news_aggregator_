@@ -34,7 +34,7 @@ const Login = () => {
     } catch (error) {
       console.error('Error parsing stored user details:', error)
     }
-  })
+  },[])
 
   const navigate = useNavigate()
 
